@@ -1,0 +1,32 @@
+@use '../base/variables' as *;
+@use '../abstracts' as *;
+
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr $laptop 1fr;
+  grid-template-rows: 1rem 1fr 4rem;
+  grid-template-areas:
+    'nav nav nav'
+    '. main .'
+    'footer footer footer';
+  @include media($laptop) {
+    grid-template-columns: $sideMarginLaptop 1fr $sideMarginLaptop;
+  }
+  @include media($tablet) {
+    grid-template-columns: $sideMarginTablet 1fr $sideMarginTablet;
+  }
+  @include media($mobile) {
+    grid-template-columns: $sideMarginMobile 1fr $sideMarginMobile;
+  }
+}
+
+.navbar {
+  grid-column: nav;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}

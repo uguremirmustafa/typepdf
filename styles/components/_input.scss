@@ -1,0 +1,8 @@
+@use '../base/variables' as *;
+@use '../abstracts/' as *;
+input {
+  padding: 1rem;
+  border: 2px solid $dark;
+  border-radius: 0.4rem;
+  outline: none;
+}

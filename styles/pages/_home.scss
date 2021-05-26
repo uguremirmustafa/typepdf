@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  h1 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .score {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .question {
+    width: 100%;
+    &__number {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    &__body {
+      margin-bottom: 1rem;
+    }
+    &__answers {
+      width: 100%;
+    }
+  }
+  .btn {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 14px;
+  }
+  .clicked {
+    button {
+      color: $primary;
+      text-shadow: 0 0 10px $primary;
+    }
+  }
+  .correct {
+    button {
+      color: yellowgreen;
+      text-shadow: 0 0 10px yellowgreen;
+    }
+  }
+}

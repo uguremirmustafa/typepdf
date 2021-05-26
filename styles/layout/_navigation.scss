@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+@use '../base/variables' as *;
+
+.navbar {
+  @include flex-ctr;
+  background-color: $light;
+  .innerNav {
+    @include flex-bw;
+    .logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 1rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+    max-width: $laptop;
+    @include media($laptop) {
+      margin: 0 $sideMarginLaptop;
+    }
+    @include media($tablet) {
+      margin: 0 $sideMarginTablet;
+    }
+    @include media($mobile) {
+      margin: 0 $sideMarginMobile;
+    }
+    .cartLogoContainer {
+      @include flex-ctr;
+      .cartLogo {
+        fill: $primary;
+        cursor: pointer;
+        &:hover {
+          fill: $dark;
+        }
+      }
+      .cartCount {
+        width: 1rem;
+        height: 1rem;
+        font-size: 0.55rem;
+        color: $light;
+        background-color: rgba(1, 1, 1, 0.9);
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border-radius: 50%;
+        @include flex-ctr;
+        // display: inline-block;
+      }
+    }
+  }
+}
+.avatarContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

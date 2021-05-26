@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+.footer {
+  @include flex-ctr;
+  a {
+    color: $primary;
+    margin-left: 0.3rem;
+  }
+}
